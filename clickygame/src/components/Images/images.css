@@ -1,0 +1,28 @@
+/* .card{
+max-width: 200px;
+font-style: italic;
+float: left;
+margin: 10px;
+background-color:#000;
+}
+
+img{
+max-width: 200px;
+} */
+
+.card {
+    background: #000;
+    border-radius: 2px;
+    height: 325px;
+    margin: 1rem;
+    position: relative;
+    width: 325px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: left;
+  }
+
+  img{
+      position: relative;
+      width: 200px;
+      height: 300px;
+  }

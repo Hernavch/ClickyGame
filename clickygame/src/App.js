@@ -30,7 +30,15 @@ class App extends React.Component {
     return (
      <Wrapper>
        <h1> HERE WE GO!!</h1>
-       <ImageCard name="card" image=""/>
+       {this.state.characters.map(f=>(
+         <ImageCard 
+          name={f.name}
+          image={f.image}
+          occupation={f.occupation}
+          
+         />
+       ))};
+       
      </Wrapper>
        
            );
