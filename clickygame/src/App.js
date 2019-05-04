@@ -1,26 +1,43 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Jumbotron from './components/Jumbotron';
+import characters from './characters.json';
+import ImageCard from './components/Images/images';
+import Wrapper from './components/Wrapper';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+  
+    characters:characters
+
+
+  }
+  handleShuffle(id) {
+    if (!this.state.clickedImages.includes(id)) {
+      this.setState({
+        score: this.state.score + 1,
+        clickedImages: [...this.state.clickedImages, id]
+      });
+    }
+    this.setState({
+      characters: characters.sort(() => Math.random() - 0.5),
+      totalClick: this.state.totalClick + 1
+    });
+  }
+  render(){
+
+    return (
+     <Wrapper>
+       <h1> HERE WE GO!!</h1>
+       <ImageCard name="card" image=""/>
+     </Wrapper>
+       
+           );
+  }
+ 
 }
+
+
 
 export default App;
