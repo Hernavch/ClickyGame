@@ -5,14 +5,14 @@ import Jumbotron from './components/Jumbotron';
 import characters from './characters.json';
 import ImageCard from './components/Images/images';
 import Wrapper from './components/Wrapper';
+import Table from './components/Table';
 
 class App extends React.Component {
   state = {
-  
-    characters:characters
-
-
-  }
+      characters:characters,
+      score:0,
+      clickedImages:[],
+    }
   handleShuffle(id) {
     if (!this.state.clickedImages.includes(id)) {
       this.setState({
@@ -29,15 +29,17 @@ class App extends React.Component {
 
     return (
      <Wrapper>
-       <h1> HERE WE GO!!</h1>
+      <Jumbotron score={this.state.score}/>
+      <Table>
        {this.state.characters.map(f=>(
          <ImageCard 
           name={f.name}
           image={f.image}
           occupation={f.occupation}
-          
-         />
+          totalClick={() => this.handleShuffle(f.id)}
+           />
        ))};
+         </Table>
        
      </Wrapper>
        
