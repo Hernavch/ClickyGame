@@ -2,9 +2,11 @@ import React from "react";
 
 
 function Table(props) {
-  return <div className="container-fluid">
-  <div className="row">
-  {props.children}
+  return <div className="container-fluid table">
+    
+  <div className="row" id="cardHolder">
+     
+    {props.children}
   </div>
 
   

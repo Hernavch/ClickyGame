@@ -3,3 +3,11 @@
     background-image: url('https://cdn.dribbble.com/users/812515/screenshots/4342121/800-logo.gif');
     background-position: center;
 }
+.score{
+    /* margin: 200px; */
+    margin-top: 150px;
+    position: relative;
+    color: white;
+    background: crimson;
+    height:60px;
+}

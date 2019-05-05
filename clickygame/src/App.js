@@ -6,6 +6,7 @@ import characters from './characters.json';
 import ImageCard from './components/Images/images';
 import Wrapper from './components/Wrapper';
 import Table from './components/Table';
+import Header from './components/Header'
 
 class App extends React.Component {
   state = {
@@ -29,8 +30,12 @@ class App extends React.Component {
 
     return (
      <Wrapper>
-      <Jumbotron score={this.state.score}/>
+      <Jumbotron>
+       {this.state.score}
+        </Jumbotron> 
+      
       <Table>
+        
        {this.state.characters.map(f=>(
          <ImageCard 
           name={f.name}
@@ -38,7 +43,7 @@ class App extends React.Component {
           occupation={f.occupation}
           totalClick={() => this.handleShuffle(f.id)}
            />
-       ))};
+       ))}
          </Table>
        
      </Wrapper>
