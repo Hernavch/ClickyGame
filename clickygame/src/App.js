@@ -21,6 +21,11 @@ class App extends React.Component {
         clickedImages: [...this.state.clickedImages, id]
       });
     }
+    else{
+      this.setState({
+        score:this.state.score -1
+      });
+    }
     this.setState({
       characters: characters.sort(() => Math.random() - 0.5),
       totalClick: this.state.totalClick + 1
