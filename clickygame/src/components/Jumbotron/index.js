@@ -1,13 +1,13 @@
 import React from "react";
 import "./jumbotron.css"
 
-function Jumbotron(props) {
+function Jumbotron({children,score}) {
   return (<div
       style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
       className="jumbotron"
     >
     <div className="score">
-     <h1> SCORE: {props.score}</h1>
+    SCORE: {score}
       </div>
     </div>
   );

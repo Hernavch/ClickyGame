@@ -30,9 +30,7 @@ class App extends React.Component {
 
     return (
      <Wrapper>
-      <Jumbotron>
-       {this.state.score}
-        </Jumbotron> 
+      <Jumbotron score={this.state.score}/> 
       
       <Table>
         
