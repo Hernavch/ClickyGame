@@ -7,7 +7,7 @@ function Jumbotron({children,score}) {
       className="jumbotron"
     >
     <div className="score">
-    SCORE: {score}
+    <h1>SCORE: {score}</h1>
       </div>
     </div>
   );
